@@ -1,0 +1,25 @@
+<div class="hierachy" id="hierachy">
+    <script type="text/javascript">
+    var Figur = {
+        Name: "Dreieck",
+        Farbe: "Blau",
+        Position: "1",
+        ausgabe: function() {
+             console.log(this.Name + " " + this.Farbe);
+        }
+    };
+
+     Figur.ausgabe();
+    </script>
+
+    <script type="text/javascript">
+            function colorchange(id) {
+                var background = document.getElementById(id).style.backgroundColor;
+                if (background == "white") {
+                    document.getElementById(id).style.background = "rgb(26,255,0)";
+                } else {
+                    document.getElementById(id).style.background = "white";
+                }      
+            }
+    </script>
+</div>
