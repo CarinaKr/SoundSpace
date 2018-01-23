@@ -50,9 +50,9 @@ int ColorProcessor::checkForColor(int hueToCheck, int satToCeck, int valToCheck)
         return DSoundKnete::CALIBRATION_COLOR;
     if(hueToCheck > 155 && hueToCheck < 180 || hueToCheck > 0 && hueToCheck < 15)
         return DSoundKnete::RED;
-    if(hueToCheck > 105 && hueToCheck < 155)
+    if(hueToCheck > 95 && hueToCheck < 155)
         return DSoundKnete::BLUE;
-    if(hueToCheck > 55 && hueToCheck < 95)
+    if(hueToCheck > 40 && hueToCheck < 95)
         return DSoundKnete::GREEN;
 
     return DSoundKnete::UNKNOWN_COLOR;

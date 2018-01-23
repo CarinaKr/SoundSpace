@@ -30,7 +30,7 @@ var shapes = ['Rectangle', 'Circle', 'Triangle'];
 
 var themeTest = [
     ['Birds_And_Slight_Rain.mp3', 'Blowing_Wind.mp3', 'Chimpanzee.mp3', 'Crickets.mp3', 'Frogs.mp3', 'Jungle.mp3', 'Osprey_Call.mp3', 'Raven.mp3', 'Redstart.mp3','Owl.mp3'],   //Forest
-    ['Birds.mp3', 'Blowing_Wind.mp3', /*'Yodelling.mp3', */'Raven.mp3', 'Redstart.mp3', 'River.mp3', /*'Cow_with_Bell.mp3', 'Goat.mp3', 'Hawk_Scream.mp3', 'Walking_in_Snow.mp3', */'Osprey_Call.mp3'], //Mountains
+    ['Birds.mp3', 'Blowing_Wind.mp3', 'Yodelling.mp3', 'Raven.mp3', 'Redstart.mp3', 'River.mp3', 'Cow_with_Bell.mp3', 'Goat.mp3', 'Hawk_Scream.mp3', 'Walking_in_Snow.mp3','Osprey_Call.mp3'], //Mountains
     ['Blowing_Wind.mp3', 'Calm_Waves.mp3', 'Ducks.mp3', 'Laughing_Gulls_2.mp3', 'Ocean_Waves.mp3', 'Seagull_Single.mp3', 'Seagulls_Swarm.mp3'],   //Sea
     ['Airplane_Takeoff.mp3', 'Car.mp3', 'People_in_Bus.mp3', 'People_in_Mall.mp3', 'Police_Sirens.mp3', 'Traffic_Jam.mp3', 'Train.mp3', 'Urban_Traffic.mp3', 'Hare_Crishna_Chanting.mp3'],   //Urban
     ['Rainstorm.mp3', 'Thunderstorm_and_Rain.mp3', 'Wind.mp3']    //Thunder
@@ -166,7 +166,8 @@ function updateAudioSources()
     let i;
     for(i = 0; i < htmlAudioElements.length; i++) 
     {
-        if(currentSoundObjectsInScene[i].soundFileName == undefined) return;
+        if(currentSoundObjectsInScene[i].soundFileName == undefined || currentSoundObjectsInScene[i].soundFileName == "") 
+        {return;}
         if(htmlAudioElements[i].paused)
         {
             playNewAudioSource(i);
