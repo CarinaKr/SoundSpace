@@ -77,7 +77,7 @@ void DSoundKnete::on_dataSend()
 void DSoundKnete::on_actionVideo_Top_triggered()
 {
 
-	QString fileName = QFileDialog::getOpenFileName(this, tr("Open Movie"), "../../../Backend/Videos");
+	QString fileName = QFileDialog::getOpenFileName(this, tr("Open Movie"), "../../Videos");
 
 	if (!fileName.isEmpty()) {
 		videoThreadTop->openFile(fileName);
